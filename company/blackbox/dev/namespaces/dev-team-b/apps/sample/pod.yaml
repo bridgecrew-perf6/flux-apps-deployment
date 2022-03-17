@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample-b
+  namespace: dev-team-b
+spec:
+  containers:
+  - name: sample-b
+    image: nginx:latest
+    ports:
+    - containerPort: 80
