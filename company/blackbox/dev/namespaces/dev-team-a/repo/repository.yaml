@@ -2,8 +2,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
-  name: dev-team-a
-  namespace: flux-system
+  name: deployments-repo
+  namespace: dev-team-a
 spec:
   interval: 30s
   ref:

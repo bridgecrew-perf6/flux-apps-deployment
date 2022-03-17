@@ -6,11 +6,11 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./company/blackbox/dev/namespaces/dev-team-a
+  path: ./company/blackbox/dev/namespaces/dev-team-a/repo
   prune: true
   sourceRef:
     kind: GitRepository
-    name: dev-team-a
+    name: deployments-repo
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
