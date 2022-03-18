@@ -1,0 +1,28 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: repo-dev-team-b
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  path: ./company/blackbox/dev/dev-team-b/repo
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: deployments-repo-b
+
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: apps-dev-team-b
+  namespace: flux-system
+spec:
+  interval: 10m0s
+  path: ./company/blackbox/dev/dev-team-b/apps
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: deployments-repo-b
+
