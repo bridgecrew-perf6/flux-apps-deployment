@@ -1,0 +1,13 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: deployments-repo-a
+  namespace: dev-team-a
+spec:
+  interval: 30s
+  secretRef:
+    name: deployment-repo-auth
+  ref:
+    branch: master
+  url: ssh://git@github.com/fauzislami/flux-apps-deployment.git
