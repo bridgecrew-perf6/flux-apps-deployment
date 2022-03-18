@@ -10,7 +10,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: deployments-repo
+    name: deployments-repo-a
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
@@ -24,5 +24,5 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: deployments-repo
+    name: deployments-repo-a
 
