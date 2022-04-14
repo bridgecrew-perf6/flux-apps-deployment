@@ -1,0 +1,40 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: apple-repo
+  namespace: apple
+spec:
+  interval: 1m0s
+  ref:
+    branch: master
+  secretRef:
+    name: deployment-repo-auth-apple
+  url: ssh://git@github.com/fauzislami/apple-app.git
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta1
+kind: Kustomization
+metadata:
+  name: apple-kustomization
+  namespace: apple
+spec:
+  interval: 10m0s
+  path: ./deployment
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: apple-repo
+  # postBuild:
+    # substituteFrom: # https://fluxcd.io/docs/components/kustomize/kustomization/#variable-substitution
+    #   - kind: ConfigMap
+    #     name: fruit-version
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: justice-adminportal-website-v2-flux-variables
+  namespace: justice
+data:
+  IMAGE_REPO: "${CORE_REPOSITORY}/apple" #Depends on where the image is pushed. We might need to change this later.
+  IMAGE_TAG: "${APPLE_VERSION}"
