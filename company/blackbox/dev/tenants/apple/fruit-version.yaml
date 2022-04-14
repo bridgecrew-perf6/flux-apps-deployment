@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: fruit-version
-  namespace: mars
+  namespace: apple
 data:
   CORE_REPOSITORY:
   JUSTICE_IAM_SERVICE_VERSION: 876324665203.dkr.ecr.us-west-2.amazonaws.com/justice-iam-service:3.17.19-c59a70ad8b67a2edfb8e26cdebc19b3e354e5be9
