@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: sample-a
-  namespace: dev-team-a
+  name: apple-app
+  namespace: apple
 spec:
   containers:
-  - name: sample-a
+  - name: apple-app
     image: nginx:latest
     ports:
     - containerPort: 80
