@@ -4,7 +4,7 @@ metadata:
   annotations:
     replicator.v1.mittwald.de/replicate-to: "blackbox,mars"
   name: avengers-feature-branch-deployment
-  namespace: 
+  namespace: apple
 data:
   # put your feature name here.
   # example :
