@@ -6,6 +6,6 @@ metadata:
 spec:
   containers:
   - name: apple-app
-    image: nginx:latest
+    image: quay.io/islamifauzi/apple:v1
     ports:
     - containerPort: 80
