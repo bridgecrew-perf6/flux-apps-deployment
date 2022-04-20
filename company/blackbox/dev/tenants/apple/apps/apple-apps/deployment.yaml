@@ -24,6 +24,12 @@ spec:
   sourceRef:
     kind: GitRepository
     name: apple-repo
+  postBuild:
+    substituteFrom: # https://fluxcd.io/docs/components/kustomize/kustomization/#variable-substitution
+      - kind: ConfigMap
+        name: apple-flux-variables
+      - kind: ConfigMap
+        name: fruit-version
 
 ---
 apiVersion: v1
