@@ -21,7 +21,7 @@ metadata:
   namespace: apple
 spec:
   interval: 10m0s
-  path: ./company/blackbox/dev/tenants/apple/apps/apple-apps
+  path: ./company/blackbox/dev/tenants/apple/apps
   prune: true
   sourceRef:
     kind: GitRepository
