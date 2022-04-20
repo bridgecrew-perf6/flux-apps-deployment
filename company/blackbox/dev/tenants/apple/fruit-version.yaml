@@ -5,4 +5,4 @@ metadata:
   namespace: apple
 data:
   CORE_REPOSITORY: quay.io/islamifauzi
-  APPLE_VERSION: v1.0.1
+  APPLE_VERSION: v1.0.1 # {"$imagepolicy": "apple:apple-image-policy"}
