@@ -27,4 +27,9 @@ spec:
     kind: GitRepository
     name: deployments-repo
     namespace: flux-system
-
+  postBuild:
+    substituteFrom: # https://fluxcd.io/docs/components/kustomize/kustomization/#variable-substitution
+      - kind: ConfigMap
+        name: apple-flux-variables
+      - kind: ConfigMap
+        name: fruit-version
