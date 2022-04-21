@@ -36,8 +36,8 @@ metadata:
   name: apple-flux-variables
   namespace: apple
 data:
-  IMAGE_REPO: "$(CORE_REPOSITORY)/apple" #Depends on where the image is pushed. We might need to change this later.
-  IMAGE_TAG: "$(APPLE_VERSION)"
+  IMAGE_REPO: "${CORE_REPOSITORY}/apple" #Depends on where the image is pushed. We might need to change this later.
+  IMAGE_TAG: "${APPLE_VERSION}"
 
 ---
 apiVersion: image.toolkit.fluxcd.io/v1beta1
@@ -46,7 +46,7 @@ metadata:
   name: apple-image-repo
   namespace: flux-system
 spec:
-  image: $(CORE_REPOSITORY)/apple
+  image: ${CORE_REPOSITORY}/apple
   interval: 1m0s
   # secretRef:
     # name: ecr-credentials
