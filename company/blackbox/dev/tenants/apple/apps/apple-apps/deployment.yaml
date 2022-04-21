@@ -46,7 +46,7 @@ metadata:
   name: apple-image-repo
   namespace: apple
 spec:
-  image: ${CORE_REPOSITORY}/apple
+  image: "${CORE_REPOSITORY}/apple"
   interval: 1m0s
   # secretRef:
     # name: ecr-credentials
