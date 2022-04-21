@@ -44,7 +44,7 @@ apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageRepository
 metadata:
   name: apple-image-repo
-  namespace: flux-system
+  namespace: apple
 spec:
   image: ${CORE_REPOSITORY}/apple
   interval: 1m0s
@@ -56,7 +56,7 @@ apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImagePolicy
 metadata:
   name: apple-image-policy
-  namespace: flux-system
+  namespace: apple
 spec:
   imageRepositoryRef:
     name: apple-image-repo
@@ -75,7 +75,7 @@ apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageUpdateAutomation
 metadata:
   name: apple-image-automation
-  namespace: flux-system
+  namespace: apple
 spec:
   interval: 1m0s
   sourceRef:
