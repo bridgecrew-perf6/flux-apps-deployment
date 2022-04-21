@@ -83,7 +83,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: deployments-repo
-    namespace: flux-system
   git:
     checkout:
       ref:
