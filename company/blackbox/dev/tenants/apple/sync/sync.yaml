@@ -20,7 +20,7 @@ metadata:
   name: apps-apple
   namespace: apple
 spec:
-  interval: 10m0s
+  interval: 1m0s
   path: ./company/blackbox/dev/tenants/apple/apps
   prune: true
   sourceRef:
